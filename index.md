@@ -1,8 +1,11 @@
 ## Welcome to DSC180B Section B06's Explainable AI Webpage!
 
-You can use the [editor on GitHub](https://github.com/yujiezhang0914/DSC180B-Project-Website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Authors
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- [Jerry (Yung-Chieh) Chan](https://github.com/JerryYC)
+- [Apoorv Pochiraju] (https://github.com/apochira)
+- [Zhendong Wang] (https://github.com/zhw005)
+- [Yujie Zhang] (https://github.com/yujiezhang0914)
 
 ### Markdown
 
