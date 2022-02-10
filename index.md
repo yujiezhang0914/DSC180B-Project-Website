@@ -3,9 +3,9 @@
 ### Authors
 
 - [Jerry (Yung-Chieh) Chan](https://github.com/JerryYC)
-- [Apoorv Pochiraju] (https://github.com/apochira)
-- [Zhendong Wang] (https://github.com/zhw005)
-- [Yujie Zhang] (https://github.com/yujiezhang0914)
+- [Apoorv Pochiraju](https://github.com/apochira)
+- [Zhendong Wang](https://github.com/zhw005)
+- [Yujie Zhang](https://github.com/yujiezhang0914)
 
 ### Markdown
 
