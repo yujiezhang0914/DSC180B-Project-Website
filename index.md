@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to DSC180B Section B06's Explainable AI Webpage!
 
 You can use the [editor on GitHub](https://github.com/yujiezhang0914/DSC180B-Project-Website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -28,9 +28,27 @@ Syntax highlighted code block
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+### Introduction
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yujiezhang0914/DSC180B-Project-Website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- We plan to introduce our project's goals, why it's important and how we planned to do it.
+
+### Description of Datasets
+
+- We plan to describe the datasets we used in our project.
+
+### Description of Methods
+
+- We plan to describe the methods briefly for general audiences and include in-depth details behind links/dropdowns for expert readers.
+
+### Results
+- We plan to describe our results in this section using words and plots.
+
+### Discussion of Results
+- We plan to discuss the results and evaluate the results.
+
+### Code
+- We plan to give a link to our project github repo so expert leaders can look into the code if they want.
+
 
 ### Support or Contact
 
