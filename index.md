@@ -31,39 +31,43 @@ Syntax highlighted code block
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Introduction
+## Introduction
 
 - We plan to introduce our project's goals, why it's important and how we planned to do it.
 
-### Description of Datasets
+## Datasets
 
 - We plan to describe the datasets we used in our project.
 
-#### Health Care
-#### Loan
-#### Housing
+### Health Care
+### Loan
+### Housing
 
-### Description of Methods
+## Method
 
 - We plan to describe the methods briefly for general audiences and include in-depth details behind links/dropdowns for expert readers.
 
-#### Global Explanation
-#### Local Explanation
-#### Counterfactual
-#### Fairness Analysis
+### Global Explanation
+### Local Explanation
+### Counterfactual
+### Fairness Analysis
 
-### Results
+## Results
 - We plan to describe our results in this section using words and plots.
-#### Global Explanation
-#### Local Explanation
-#### Counterfactual
-#### Fairness Analysis
+### Global Explanation
+### Local Explanation
+### Counterfactual
+### Fairness Analysis
 
 
-### Discussion
+## Discussion
 - We plan to discuss the results and evaluate the results.
+### Global Explanation
+### Local Explanation
+### Counterfactual
+### Fairness Analysis
 
-### Code
+## Code
 - We plan to give a link to our project github repo so expert leaders can look into the code if they want.
 
 
