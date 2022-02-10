@@ -39,14 +39,28 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 - We plan to describe the datasets we used in our project.
 
+#### Health Care
+#### Loan
+#### Housing
+
 ### Description of Methods
 
 - We plan to describe the methods briefly for general audiences and include in-depth details behind links/dropdowns for expert readers.
 
+#### Global Explanation
+#### Local Explanation
+#### Counterfactual
+#### Fairness Analysis
+
 ### Results
 - We plan to describe our results in this section using words and plots.
+#### Global Explanation
+#### Local Explanation
+#### Counterfactual
+#### Fairness Analysis
 
-### Discussion of Results
+
+### Discussion
 - We plan to discuss the results and evaluate the results.
 
 ### Code
