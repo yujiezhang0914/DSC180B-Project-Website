@@ -40,12 +40,25 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 - We plan to describe the datasets we used in our project.
 
 ### Health Care
+
+Briefly explain the feature of the dataset, feature engineering steps, and the prediction task. Include link to the original dataset.
+
 ### Loan
+
+Briefly explain the feature of the dataset, feature engineering steps, and the prediction task. Include link to the original dataset.
+
 ### Housing
+
+Briefly explain the feature of the dataset, feature engineering steps, and the prediction task. Include link to the original dataset.
 
 ## Method
 
-- We plan to describe the methods briefly for general audiences and include in-depth details behind links/dropdowns for expert readers.
+We selected four popular machine learning models that's often used in tabular data classification. Our model selection covers classic machine learning model, ensemble model, and deep learning model. Following is a breif introduction to those models. Since this project focuses on model explanation, we will skip the model training details here.
+
+* SVM: Support vector machine is a supervise learning method effective in high dimensional spaces. It project datapoints to high dimensional space and seperate them with a hyperplane.
+* LGBM: LightGBM is an ensemble model with gradient boosted decision trees.
+* XGBoost: Similar as LGBM, extreme Gradient Boosting is an implementation of gradient boosted decision trees with more regularized parallel decision trees.
+* TabNet: TabNet is an deep tabular data learning architecture based on attentive transformer.
 
 ### Global Explanation
 ### Local Explanation
