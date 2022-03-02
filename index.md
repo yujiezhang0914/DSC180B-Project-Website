@@ -7,7 +7,7 @@
 - [Zhendong Wang](https://github.com/zhw005)
 - [Yujie Zhang](https://github.com/yujiezhang0914)
 
-## Introduction - Assess the Fairness and reasoning of Models by Explaining Black Box Model Outcomes using Explainable AI 
+## Introduction - Assess the Fairness and reasoning of Black Box Model Outcomes using Explainable AI 
 
 Nowadays, the algorithmic decision-making system has been very common in people’s daily lives. Gradually, some algorithms become too complex for humans to interpret, such as some black-box machine learning models and deep neural networks. 
 
