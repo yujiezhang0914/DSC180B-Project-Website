@@ -9,25 +9,29 @@
 
 ## Introduction
 
-- Nowadays, the algorithmic decision-making system has been very common in people’s daily lives. Gradually, some algorithms become too complex for humans to interpret, such as some black-box machine learning models and deep neural networks. In order to assess the fairness of the models and make them better tools for different parties, we need explainable AI (XAI) to uncover the reasoning behind the predictions made by those black-box models. In our project, we will be focusing on using different techniques from causal inferences and explainable AI to interpret various classification models across various domains. In particular, we are interested in three domains - healthcare, finance, and the housing market. Within each domain, we are going to train four binary classification models first, and we have four goals in general: 1) Explaining black-box models both globally and locally with various XAI methods. 2) Assessing the fairness of each learning algorithm with regard to different sensitive attributes; 3) Generating recourse for individuals - a set of minimal actions to change the prediction of those black-box models. 4) Evaluating the explanations from those XAI methods using domain knowledge.
+Nowadays, the algorithmic decision-making system has been very common in people’s daily lives. Gradually, some algorithms become too complex for humans to interpret, such as some black-box machine learning models and deep neural networks. 
+
+In order to assess the fairness of the models and make them better tools for different parties, we need explainable AI (XAI) to uncover the reasoning behind the predictions made by those black-box models. 
+
+In our project, we will be focusing on using different techniques from causal inferences and explainable AI to interpret various classification models across various domains. In particular, we are interested in three domains - healthcare, finance, and the housing market. Within each domain, we are going to train four binary classification models first, and we have four goals in general: 1) Explaining black-box models both globally and locally with various XAI methods. 2) Assessing the fairness of each learning algorithm with regard to different sensitive attributes; 3) Generating recourse for individuals - a set of minimal actions to change the prediction of those black-box models. 4) Evaluating the explanations from those XAI methods using domain knowledge.
 
 
 ## Datasets
 
-- In our project, we use datasets from three domains: Healthcare, Finance, and Housing Market.
+In our project, we use datasets from three domains: Healthcare, Finance, and Housing Market. 
 
 ### Health Care
 
-For the healthcare domain, we will use the data on hospital readmission for diabetes patients obtained from Kaggle. The data was collected for the Hospital Readmission Reduction Program operated by Medicare & Medicaid Services and indicates whether diabetic patients were readmitted to the hospital and whether it was within 30 days or after beyond 30 days. This dataset contains records for 101,766 patients and includes attributes for each patient such as race, age, gender, insulin levels, type of admission, and other specific information about medical history. For this dataset, we will predict whether the patient will be readmitted.
+We choose healthcare as one of the domains because it is sensitive and assessing fairness of decision algorithms on this domain is important. For the healthcare domain, we will use the data on hospital readmission for diabetes patients obtained from Kaggle. The data was collected for the Hospital Readmission Reduction Program operated by Medicare & Medicaid Services and indicates whether diabetic patients were readmitted to the hospital and whether it was within 30 days or after beyond 30 days. This dataset contains records for 101,766 patients and includes attributes for each patient such as race, age, gender, insulin levels, type of admission, and other specific information about medical history. For this dataset, we will predict whether the patient will be readmitted.
 
 ### Finance
 
-For the finance domain, we will use the loan defaulter dataset obtained from Kaggle. The loan defaulter dataset consists of information such as gender and income of 307,511 applicants. For this dataset, we will predict whether an applicant will be a defaulter.
+We choose finance domain because our life is filled with topics related to finance and money, so it is important and interesting to find out the reasoning behind machine learning model decisions in this domain. For the finance domain, we will use the loan defaulter dataset obtained from Kaggle. The loan defaulter dataset consists of information such as gender and income of 307,511 applicants. For this dataset, we will predict whether an applicant will be a defaulter.
 
 
 ### Housing
 
-For the housing market domain, we will use the Airbnb dataset obtained from Kaggle. The Airbnb dataset consists of basic information such as name and location for 3,818 Airbnb properties. For this dataset, we will predict the class that the price of an Airbnb property falls into.
+We choose the housing market domain because housing is an essential element in everyone's life as well. For the housing market domain, we will use the Airbnb dataset obtained from Kaggle. The Airbnb dataset consists of basic information such as name and location for 3,818 Airbnb properties. For this dataset, we will predict the class that the price of an Airbnb property falls into.
 
 ## Method
 
@@ -46,11 +50,24 @@ Introduce global explanation methods PDP...
 Local interpretation methods explain individual predictions. 
 Introduce local explanation method SHAP and LIME
 
-### Counterfactual
+### Counterfactual Explanations
 Intorduce counterfactual method...
 
 ### Fairness Analysis
-Introduce fairness evaluation task. Definition and sensitive variable of each dataset.
+We conduct some common fairness tests on the models trained on the loan dataset and the healthcare dataset. We pick out sensitive attributes that should be independent of the target variable base on human knowledge. For the loan dataset, the sensitive variable that we chose is gender, and for the healthcare dataset, the sensitive attribute is race.
+For each classification model, we evaluated the fairness based on four definitions: Group Fairness, Predictive Parity, False Positive Error Rate Balance, and False Negative Error Rate Balance. They evaluate the fairness of a model based on different definitions. 
+<details>
+<summary>Learn more about the four fairness definitions</summary>
+<br>
+- Group Fairness: Check if subjects in both protected and unprotected groups have equal probability of being assigned to the positive predicted class 
+
+- Predictive Parity: Check if both protected and unprotected groups have equal PPV – the probability of a subject with positive predictive value to truly belong to the positive class 
+  
+- False Positive Error Rate Balance (Predictive Equality): Check if both protected and unprotected groups have equal FPR – the probability of a subject in the negative class to have a positive predictive value. 
+  
+- False Negative Error Rate Balance (Equal Opportunity): Check if both protected and unprotected groups have equal FNR – the probability of a subject in a positive class to have a negative predictive value. 
+</details>
+ 
 
 ## Results
 - We plan to describe our results in this section using words and plots.
