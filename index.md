@@ -9,23 +9,25 @@
 
 ## Introduction
 
-- We plan to introduce our project's goals, why it's important and how we planned to do it.
+- Nowadays, the algorithmic decision-making system has been very common in people’s daily lives. Gradually, some algorithms become too complex for humans to interpret, such as some black-box machine learning models and deep neural networks. In order to assess the fairness of the models and make them better tools for different parties, we need explainable AI (XAI) to uncover the reasoning behind the predictions made by those black-box models. In our project, we will be focusing on using different techniques from causal inferences and explainable AI to interpret various classification models across various domains. In particular, we are interested in three domains - healthcare, finance, and the housing market. Within each domain, we are going to train four binary classification models first, and we have four goals in general: 1) Explaining black-box models both globally and locally with various XAI methods. 2) Assessing the fairness of each learning algorithm with regard to different sensitive attributes; 3) Generating recourse for individuals - a set of minimal actions to change the prediction of those black-box models. 4) Evaluating the explanations from those XAI methods using domain knowledge.
+
 
 ## Datasets
 
-- We plan to describe the datasets we used in our project.
+- In our project, we use datasets from three domains: Healthcare, Finance, and Housing Market.
 
 ### Health Care
 
-Briefly explain the feature of the dataset, feature engineering steps, and the prediction task. Include link to the original dataset.
+For the healthcare domain, we will use the data on hospital readmission for diabetes patients obtained from Kaggle. The data was collected for the Hospital Readmission Reduction Program operated by Medicare & Medicaid Services and indicates whether diabetic patients were readmitted to the hospital and whether it was within 30 days or after beyond 30 days. This dataset contains records for 101,766 patients and includes attributes for each patient such as race, age, gender, insulin levels, type of admission, and other specific information about medical history. For this dataset, we will predict whether the patient will be readmitted.
 
-### Loan
+### Finance
 
-Briefly explain the feature of the dataset, feature engineering steps, and the prediction task. Include link to the original dataset.
+For the finance domain, we will use the loan defaulter dataset obtained from Kaggle. The loan defaulter dataset consists of information such as gender and income of 307,511 applicants. For this dataset, we will predict whether an applicant will be a defaulter.
+
 
 ### Housing
 
-Briefly explain the feature of the dataset, feature engineering steps, and the prediction task. Include link to the original dataset.
+For the housing market domain, we will use the Airbnb dataset obtained from Kaggle. The Airbnb dataset consists of basic information such as name and location for 3,818 Airbnb properties. For this dataset, we will predict the class that the price of an Airbnb property falls into.
 
 ## Method
 
@@ -37,9 +39,11 @@ We selected four popular machine learning models that's often used in tabular da
 * TabNet: TabNet is an deep tabular data learning architecture based on attentive transformer.
 
 ### Global Explanation
+Global methods describe the average behavior of a machine learning model. 
 Introduce global explanation methods PDP...
 
 ### Local Explanation
+Local interpretation methods explain individual predictions. 
 Introduce local explanation method SHAP and LIME
 
 ### Counterfactual
@@ -50,6 +54,7 @@ Introduce fairness evaluation task. Definition and sensitive variable of each da
 
 ## Results
 - We plan to describe our results in this section using words and plots.
+
 ### Global Explanation
 some example of global explanation result (plots)
 
@@ -71,9 +76,10 @@ Compare explanation generated from different model and different XAI methods.
 - Discuss the results.
 
 ## Code
-- We plan to give a link to our project github repo so expert leaders can look into the code if they want.
+- [LINK](https://github.com/zhw005/DSC180B-Project) to our project github repo. 
 
 
 ## Reference
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Molnar, C. (2021, November 11). Interpretable machine learning. 9.5 Shapley Values. Retrieved December 2, 2021, from https://christophm.github.io/interpretable-ml-book/shapley.html.
+
