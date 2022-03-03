@@ -130,8 +130,8 @@ Compare explanation generated from different model and different XAI methods.
 - Discuss the results.
 
 ## Code
-- [LINK](https://github.com/zhw005/DSC180B-Project) to our project github repo. 
-
+|[Click here to see code for this project](https://github.com/zhw005/DSC180B-Project)|
+|---|
 
 ## Reference
 
