@@ -20,7 +20,7 @@ In the project, we will be focusing on using different techniques from causal in
 4) Evaluating the explanations from those XAI methods using domain knowledge.
 
 
-## Datasets 
+## Datasets in Three Domains
 
 In our project, we use datasets from three domains: Healthcare, Finance, and Housing Market.
 
@@ -42,7 +42,7 @@ We choose the housing market domain because housing is an essential element in e
 
 [LINK to Housing Dataset](https://www.kaggle.com/airbnb/seattle?select=listings.csv)
 
-## Method
+## Methods of XAI
 
 We selected four popular machine learning models that's often used in tabular data classification. Our model selection covers classic machine learning model, ensemble model, and deep learning model. Following is a breif introduction to those models. Since this project focuses on model explanation, we will skip the model training details here.
 
@@ -52,8 +52,31 @@ We selected four popular machine learning models that's often used in tabular da
 * TabNet: TabNet is an deep tabular data learning architecture based on attentive transformer.
 
 ### Global Explanation
-Global methods describe the average behavior of a machine learning model. 
-Introduce global explanation methods PDP...
+Global methods describe the average behavior of a machine learning model. In this project, we use two global explanation methods: partial dependence plot and Permutation Feature Importance.
+
+The **Partial Dependence Plot (PDP)** works by marginalizing the machine learning model output over the distribution of the features in set C so that the function shows the relationship between the features in set S we are interested in and the predicted outcome. In the case that features are uncorrelated, a PDP shows how the average prediction in the dataset changes when a feature changes. The PDP is easy to implement and compute. It also has a clear interpretation: in the case that features are uncorrelated, it shows how the average prediction in the dataset changes when a feature changes. 
+
+
+The **Permutation Feature Importance** calculates the feature importance by permuting the feature in the dataset. A feature is important if the error of a model increases significantly after permuting the feature. A feature is not important if the error of a model does not change after shuffling the feature values. The Permutation Feature Importance method takes into account all interactions with other features by destroying the interaction effects with other features when permuting the feature. The advantage of this method is that it takes into account all interactions with other features because it destroys the interaction effects with other features when permuting the feature. Also, it is a straightforward method since it does not require retraining the model. 
+
+<details>
+<summary>Learn more about PDP and Permutation Feature Importance</summary>
+<br>
+  
+**Partial Dependence Plot**
+  
+The PDP works by marginalizing the machine learning model output over the distribution of the features in set C, so that the function shows the relationship between the features in set S we are interested in and the predicted outcome. Since the more important the feature is the more varied a PDP is, the numerical feature importance can be defined as the deviation of each unique feature value from the average curve. For categorical features, the importance is defined as the range of the PDP values for the unique categories divided by four, which is the range rule. The PDP can be estimated by calculating averages in the training data. An assumption of the PDP is that the features in set C are not correlated with the features in set S. And the PDP only has a causal interpretation when the features are independent of each other.
+  
+**Permutation Feature Importance**
+  
+A feature is important if the error of a model increases significantly after permuting the feature. A feature is not important if the error of a model does not change after shuffling the feature values. The general algorithm to calculate permutation feature importance is as follows: 
+1. Calculate the original model error.
+2. For each feature i, 
+- Generate a new feature matrix X by shuffling the values in feature i.
+- Calculate the error after the permutation.
+- Calculate the difference FI between the original error and the error after the permutation.
+3. Sort features by the difference in descending order.
+</details>
 
 ### Local Explanation
 Local interpretation methods explain individual predictions. 
@@ -79,7 +102,7 @@ For each classification model, we evaluated the fairness based on four definitio
 </details>
  
 
-## Results
+## Results of the Project
 - We plan to describe our results in this section using words and plots.
 
 ### Global Explanation
