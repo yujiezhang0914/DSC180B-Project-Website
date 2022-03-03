@@ -64,9 +64,9 @@ The **Partial Dependence Plot (PDP)** works by marginalizing the machine learnin
 The **Permutation Feature Importance** calculates the feature importance by permuting the feature in the dataset. A feature is important if the error of a model increases significantly after permuting the feature. A feature is not important if the error of a model does not change after shuffling the feature values. The Permutation Feature Importance method takes into account all interactions with other features by destroying the interaction effects with other features when permuting the feature. The advantage of this method is that it takes into account all interactions with other features because it destroys the interaction effects with other features when permuting the feature. Also, it is a straightforward method since it does not require retraining the model. 
 
 <details>
-<summary>:arrow_down: Learn more about PDP and Permutation Feature Importance</summary>
+<summary>:arrow_down:Click to learn more about PDP and Permutation Feature Importance</summary>
 <br>
-  
+
 **Partial Dependence Plot**
   
 The PDP works by marginalizing the machine learning model output over the distribution of the features in set C, so that the function shows the relationship between the features in set S we are interested in and the predicted outcome. Since the more important the feature is the more varied a PDP is, the numerical feature importance can be defined as the deviation of each unique feature value from the average curve. For categorical features, the importance is defined as the range of the PDP values for the unique categories divided by four, which is the range rule. The PDP can be estimated by calculating averages in the training data. An assumption of the PDP is that the features in set C are not correlated with the features in set S. And the PDP only has a causal interpretation when the features are independent of each other.
@@ -93,7 +93,7 @@ Intorduce counterfactual method...
 We conduct some common fairness tests on the models trained on the loan dataset and the healthcare dataset. We pick out sensitive attributes that should be independent of the target variable base on human knowledge. For the loan dataset, the sensitive variable that we chose is gender, and for the healthcare dataset, the sensitive attribute is race.
 For each classification model, we evaluated the fairness based on four definitions: Group Fairness, Predictive Parity, False Positive Error Rate Balance, and False Negative Error Rate Balance. They evaluate the fairness of a model based on different definitions. 
 <details>
-<summary>:arrow_down: Learn more about the four fairness definitions</summary>
+<summary>:arrow_down:Click to learn more about the four fairness definitions</summary>
 <br>
 
 - **Group Fairness**: Check if subjects in both protected and unprotected groups have equal probability of being assigned to the positive predicted class 
