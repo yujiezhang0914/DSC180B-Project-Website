@@ -13,10 +13,14 @@ Nowadays, the algorithmic decision-making system has been very common in peopleâ
 
 In order to assess the fairness of the models and make them better tools for different parties, we need explainable AI (XAI) to uncover the reasoning behind the predictions made by those black-box models. 
 
-In the project, we will be focusing on using different techniques from causal inferences and explainable AI to interpret various classification models across various domains. In particular, we are interested in three domains - healthcare, finance, and the housing market. Within each domain, we are going to train four binary classification models first, and we have four goals in general: 
-1) Explaining black-box models both globally and locally with various XAI methods; 
-2) Assessing the fairness of each learning algorithm with regard to different sensitive attributes; 
+In the project, we are focusing on using different techniques from causal inferences and XAI to interpret various classification models across various domains. In particular, we are interested in three domains - healthcare, finance, and the housing market. Within each domain, we are going to train four binary classification models first, and we have four goals in general: 
+
+1) Explaining black-box models both globally and locally with various XAI methods;
+
+2) Assessing the fairness of each learning algorithm with regard to different sensitive attributes;
+ 
 3) Generating recourse for individuals - a set of minimal actions to change the prediction of those black-box models;
+ 
 4) Evaluating the explanations from those XAI methods using domain knowledge.
 
 
@@ -60,7 +64,7 @@ The **Partial Dependence Plot (PDP)** works by marginalizing the machine learnin
 The **Permutation Feature Importance** calculates the feature importance by permuting the feature in the dataset. A feature is important if the error of a model increases significantly after permuting the feature. A feature is not important if the error of a model does not change after shuffling the feature values. The Permutation Feature Importance method takes into account all interactions with other features by destroying the interaction effects with other features when permuting the feature. The advantage of this method is that it takes into account all interactions with other features because it destroys the interaction effects with other features when permuting the feature. Also, it is a straightforward method since it does not require retraining the model. 
 
 <details>
-<summary>Learn more about PDP and Permutation Feature Importance</summary>
+<summary>:arrow_down: Learn more about PDP and Permutation Feature Importance</summary>
 <br>
   
 **Partial Dependence Plot**
@@ -89,7 +93,7 @@ Intorduce counterfactual method...
 We conduct some common fairness tests on the models trained on the loan dataset and the healthcare dataset. We pick out sensitive attributes that should be independent of the target variable base on human knowledge. For the loan dataset, the sensitive variable that we chose is gender, and for the healthcare dataset, the sensitive attribute is race.
 For each classification model, we evaluated the fairness based on four definitions: Group Fairness, Predictive Parity, False Positive Error Rate Balance, and False Negative Error Rate Balance. They evaluate the fairness of a model based on different definitions. 
 <details>
-<summary>Learn more about the four fairness definitions</summary>
+<summary>:arrow_down: Learn more about the four fairness definitions</summary>
 <br>
 
 - **Group Fairness**: Check if subjects in both protected and unprotected groups have equal probability of being assigned to the positive predicted class 
