@@ -87,7 +87,11 @@ Local interpretation methods explain individual predictions.
 Introduce local explanation method SHAP and LIME
 
 ### Counterfactual Explanations
-Intorduce counterfactual method...
+A counterfactual explanation describes a causal situation in the form of “If X had not occurred, Y would not have occurred.” It's aim to provide percise actions to achieve a desired outcome. For example, if someone was denied for a loan application by some black-box machine learning algorithm, counterfactual explanation can provide them actions they can do to increase their chance of getting the loan. A good counterfactual explanation method should provide multiple, diverse, and realistic counterfactual explanations that produce the predefined prediction as closely as possible. In our project, we are using the state-of-the-art XAI method LEWIS to generate recourses.
+
+
+[Click here to learn more about LEWIS](https://arxiv.org/pdf/2103.11972.pdf)
+
 
 ### Fairness Analysis
 We conduct some common fairness tests on the models trained on the loan dataset and the healthcare dataset. We pick out sensitive attributes that should be independent of the target variable base on human knowledge. For the loan dataset, the sensitive variable that we chose is gender, and for the healthcare dataset, the sensitive attribute is race.
