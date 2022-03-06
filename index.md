@@ -127,7 +127,23 @@ some example of global explanation of local explanation result (plots) Interacti
 Use the same data instance to generate counterfactual result
 
 ### Fairness Analysis
-Discuss Fairness Analysis result
+In this section, we run all the fairness evaluation methods on different datasets and models. We select some interesting result for each method and the presented in the followings. We assume the dataset represent the actual population.
+
+#### Group Fairness
+
+#### Predictive Parity
+
+#### Conditional Frequencies
+
+
+
+#### Causal Discrimination
+- Dataset: Loan
+- Model: TabNet
+- Sensitive variable: Gender (`CODE_GENDER`)
+
+In this experiment, we flip the gender of all the instance and measure the average prediction change for each gender. After only flipping the gender feature, **21.0% of the instances have their prediction changed**. By changing gender of the loan borrower from female to male increases the prediction by 11.2% on average, and by changing the gender from male to female decreases the prediction by 9.6% on average. The result indicates that the model is unfair and rely on the gender to make it's prediction. The model is biased toward giving male loan borrower a higher prediction of default probability.
+
 
 ### Explanation Comparison
 Compare explanation generated from different model and different XAI methods.
