@@ -95,22 +95,25 @@ A counterfactual explanation describes a causal situation in the form of “If X
 
 ### Fairness Analysis
 We conduct some common fairness tests on the models trained on the loan dataset and the healthcare dataset. We pick out sensitive attributes that should be independent of the target variable base on human knowledge. For the loan dataset, the sensitive variable that we chose is gender, and for the healthcare dataset, the sensitive attribute is race.
-For each classification model, we evaluated the fairness based on four definitions: Group Fairness, Predictive Parity, False Positive Error Rate Balance, and False Negative Error Rate Balance. They evaluate the fairness of a model based on different definitions. 
+For each classification model, we evaluated the fairness based on four definitions: Group Fairness, Predictive Parity, Matching conditional frequencies, and Causal discrimination. They evaluate the fairness of a model based on different definitions. 
+
+
 <details>
 <summary>--> Click to learn more about the four fairness definitions</summary>
 <br>
 
-- **Group Fairness**: Check if subjects in both protected and unprotected groups have equal probability of being assigned to the positive predicted class 
+- **Group Fairness**: A fair model’s prediction should be independent of the sensitive attribute. Therefore, it should have the same probability of giving a positive prediction for individuals of different protected classes. In this test we check if  P(Y = 1|S = si) = P(Y = 1|S = sj). Notice that this test does not require the actual value of the target variable. In other words, the test is independent of whether the model makes the correct predictions.
+ 
+- **Predictive Parity**: This test measures the model’s predictive power on different groups of the protected class. The probability of the model making the correct prediction should be the same across different groups. In this test, we check if the true positive rates are the same among groups: P(T = 1|Y = 1, S= si) = P(T = 1|Y = 1, S = sj). The method can be also be applied with different prediction evaluation metrics.
+  
+- **Matching conditional frequencies**: This test is similar to the predictive parity test, except we consider the distribution of predicted probabilities rather than the binarized prediction. We binned the predicted probabilities and compare the frequencies of each bin across different groups. For each bin, We check if P(T = 1|Y  ∈  bink, S= si) = P(T = 1|Y  ∈ bink, S = sj)
 
-- **Predictive Parity**: Check if both protected and unprotected groups have equal PPV – the probability of a subject with positive predictive value to truly belong to the positive class 
   
-- **False Positive Error Rate Balance (Predictive Equality)**: Check if both protected and unprotected groups have equal FPR – the probability of a subject in the negative class to have a positive predictive value. 
-  
-- **False Negative Error Rate Balance (Equal Opportunity)**: Check if both protected and unprotected groups have equal FNR – the probability of a subject in a positive class to have a negative predictive value. 
+- **Causal discrimination**: The model is counterfactually fair if its prediction is independent of the change of sensitive variable. We conduct the test by flipping or randomly shuffling the sensitive attribute of the test set and checking if the prediction remains the same.
 </details>
  
 
-## Results of the Project
+## Results
 - We plan to describe our results in this section using words and plots.
 
 ### Global Explanation
