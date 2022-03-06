@@ -140,7 +140,7 @@ In this section, we run all the fairness evaluation methods on different dataset
 
 The gender attribute of each instance are randomly generated. Therefore it's not correlated with the target at all. The correlation coefficient of the two variable is 0.02. 
 
-Each bar of the figure represent the true probability of an instance being positive given that the model prediction is within a certain range. From the graph, we can see that when model's prediction is within the 0.4~0.6 bin or the 0.6~0.8 bin, male airbnb host has a significantly lower true probability of being in the positive class. In other words, the model overpredicted on instances with male owner. Hense, the model is unfair.
+Each bar of the figure represent the true probability of an instance being positive given that the model prediction is within a certain range. From the graph, we can see that when model's prediction is within the 0.4\~0.6 bin or the 0.6\~0.8 bin, male airbnb host has a significantly lower true probability of being in the positive class. In other words, the model overpredicted on instances with male owner. Hense, the model is unfair.
 
 ![fairness evaluation - conditional frequencies](image/fairness_freq.png)
 
