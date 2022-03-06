@@ -79,8 +79,25 @@ The advantage of this method is that it takes into account all interactions with
 </details>
 
 ### Local Explanation
-Local interpretation methods explain individual predictions. 
-Introduce local explanation method SHAP and LIME
+Local interpretation methods explain individual predictions. In this project, we use two local explanation methods: Local Interpretable Model-agnostic Explanations (LIME) and Shapley Values.
+
+The **Local Interpretable Model-agnostic Explanations (LIME)** tests what happens to the model output when we give variations of the model input data. LIME trains an interpretable model such as a decision tree on the perturbed data, which is a good approximation of the black box model predictions locally.  
+
+The **Shapley Values** calculates the average marginal contribution across all possible coalitions. A feature is important if the error of a model increases significantly after permuting the feature. The sum of Shapley values for all features yields the difference between the actual prediction of a single instance and the average prediction. In other words, if we estimate Shapley values for all features, we will get a complete distribution of actual prediction minus the average prediction among the feature values. 
+
+
+<details>
+<summary>--> Click to learn more about LIME and Shapley Values</summary>
+<br>
+
+- LIME: To generate LIME, the first step is to select instance x that we want to get an explanation for. Then we perturb the dataset and get the black box model predictions for these new points. Then we weight the new samples according to their proximity to x. Next we train a weighted interpretable model on the perturbed dataset. Finally we generate explanations by interpreting the interpretable model. 		
+For tabular data, LIME samples are taken in a problematic way: from the training data’s mass center. However, this way increases the chance of getting different results for some of the sample predictions compared to the point of interest. Therefore, LIME can learn some explanations. One advantage of LIME is that we can use the same interpretable model to generate local explanations for different black box models. We can evaluate LIME’s reliability using the fidelity measure by measuring how well a local model approximates the black box predictions. And LIME is more suitable to generate explanations for a lay person because the interpretable models make short human-friendly explanations.
+
+  
+- Shapley Values: Computing the exact Shapley value could be computationally expensive most of the time as the computation time increases exponentially with the number of features, so estimating the Shapley value is necessary. Advantages of Shapley Values are that it is the only explanation method with a solid theory, and it allows comparing a prediction with the average prediction of either an entire dataset or a subset of the dataset. 
+</details>
+
+
 
 ### Counterfactual Explanations
 A counterfactual explanation describes a causal situation in the form of “If X had not occurred, Y would not have occurred.” It's aim to provide percise actions to achieve a desired outcome. For example, if someone was denied for a loan application by some black-box machine learning algorithm, counterfactual explanation can provide them actions they can do to increase their chance of getting the loan. A good counterfactual explanation method should provide multiple, diverse, and realistic counterfactual explanations that produce the predefined prediction as closely as possible. In our project, we are using the state-of-the-art XAI method LEWIS to generate recourses.
