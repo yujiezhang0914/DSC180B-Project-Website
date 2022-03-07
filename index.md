@@ -105,6 +105,19 @@ A counterfactual explanation describes a causal situation in the form of “If X
 
 [Click here to learn more about LEWIS](https://arxiv.org/pdf/2103.11972.pdf)
 
+### Explaining False Positive (FP) and False Negative (FN) Predictions
+In this section, we are interested in explaining both false positive and false negative predictions made by different black-box models. In other words, we would like to explore reasons why a particular model predicts positive outcomes whereas the true label is negative and why a model predicts negative outcomes whereas the true label is positive. To analyze FP and FN predictions, we will be using causal inferences in general, and the details of each step are described below.
+
+<details>
+<summary>--> Click to learn more about Causal Inference</summary>
+<br>
+
+ - Changing Labels: To begin with, we are going to change the label of a dataset to denote whether a prediction is FP or FN. For example, in the original Airbnb dataset, the label encodes whether a price of a listing is above or below average with values 0 and 1. In the case of FP analysis, we will be changing the label to 0 and 1, where value 1 denotes that a prediction of the model is FP and value 0 denotes that a prediction of the model is not FP.
+
+  
+ - Modeling: To do causal inference, we first need to model the assumptions and create causal graphs that explain the causal relationships between variables, including the treatment and outcome that we are interested in.
+
+</details>
 
 ### Fairness Analysis
 We conduct some common fairness tests on the models trained on the loan dataset and the healthcare dataset. We pick out sensitive attributes that should be independent of the target variable base on human knowledge. For the loan dataset, the sensitive variable that we chose is gender, and for the healthcare dataset, the sensitive attribute is race.
@@ -123,7 +136,8 @@ For each classification model, we evaluated the fairness based on four definitio
   
  - Causal discrimination: The model is counterfactually fair if its prediction is independent of the change of sensitive variable. We conduct the test by flipping or randomly shuffling the sensitive attribute of the test set and checking if the prediction remains the same.
 </details>
- 
+
+
 
 ## Results
 
