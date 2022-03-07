@@ -181,6 +181,7 @@ Using the domain knowledge, we constructed a simple causal graph below with seve
 #### FN Example
 Here is an example of how the feature “accommodates” causes the SVC model to predict false negatives. 
 ![FN](image/FN.PNG)
+
 First, the DoWhy causal model sets the feature “accommodates” to be the treatment and identifies the confounder “beds” using the backdoor criterion. Then, the DoWhy causal model simulates the randomized experiment by adjusting the influence of some confounding variables Z, and it is “beds” in this case. The adjustment formula is presented by p(P|do(T))=zp(Y|T, Z)p(Z). After identifying the estimand, the DoWhy causal model estimates the estimand using the Average Treatment Effect (ATE), and the result is about 0.065. Thus, having higher maximum capacity in a listing increases the chance of the SVC predicting FN. To validate the result, we use two refutation tests. The first one is called Random Common Cause which adds randomly drawn covariates to data and re-runs the analysis to see if the causal estimate changes or not. If our assumption was originally correct then the causal estimate shouldn’t change by much. In this case, the estimated effect and the new effect are about the same. The second test is called Data Subset Refuter which creates subsets of the data(similar to cross-validation) and checks whether the causal estimates vary across subsets. If our assumptions were correct there shouldn’t be much variation. In our example, the estimated effect and the new effect is not significantly different according to the p value. We can see that our estimate passes all refutation tests. This does not prove its correctness, but it increases confidence in the estimate.
 
 In conclusion, after the causal inference, we can say that having a higher maximum capacity in a listing increases the chance of the SVC predicting FN. This is intuitive because a listing with a higher maximum capacity is more likely to be expensive in reality, so the model will give FN predictions if the model fails to capture this positive correlation.
@@ -188,6 +189,7 @@ In conclusion, after the causal inference, we can say that having a higher maxim
 #### FP Example
 Here is another example of how room type causes the LGBM model to predict false positives.
 ![FP](image/FP.PNG)
+
 The same procedure used to generate causal inference for the previous example applies here as well. The DoWhy model first sets the “room_type” to be the treatment and identifies the cofounder “property_type” and estimand it tries to estimate. Then, it estimates the ATE to be around 0.077. So, the predictor tends to give FP predictions if the room type is the entire home/apt. The estimate also passes all refutation tests. Again, this does not prove its correctness, but it increases confidence in the estimate. The result makes sense because if a model puts too much weight on the room type, it will predict the higher prices for listings with an entire place, while this is not always the case in reality. Sometimes a shared place could be more expensive than an entire apartment depending on the location and other factors.
 
 
