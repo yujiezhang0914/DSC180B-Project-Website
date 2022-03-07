@@ -228,5 +228,11 @@ Compare explanation generated from different model and different XAI methods.
 
 ## 6. Reference
 
+- Fairness Definitions Explained. Verma Sahil, Rubin Julia. Retrieved February 3, 2022, from https://fairware.cs.umass.edu/papers/Verma.pdf  
+- Loan Defaulter. Gaurav Dutta. Retrieved December 3, 2021, from https://www.kaggle.com/gauravduttakiit/loan-defaulter 
 - Molnar, C. (2021, November 11). Interpretable machine learning. 9.5 Shapley Values. Retrieved December 2, 2021, from https://christophm.github.io/interpretable-ml-book/shapley.html.
+- Prediction on Hospital Readmission. Abhishek Sharma. Retrieved February 4, 2022, from https://www.kaggle.com/iabhishekofficial/prediction-on-hospital-readmission
+- Sainyam Galhotra, Romila Pradhan, & Babak Salimi. (2021). Explaining Black-Box Algorithms Using Probabilistic Contrastive Counterfactuals. 
+- Seattle Airbnb Open Data. Airbnb. Retrieved December 1, 2021, from https://www.kaggle.com/airbnb/seattle?select=listings.csv 
+
 
