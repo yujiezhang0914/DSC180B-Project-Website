@@ -229,11 +229,6 @@ Each bar of the figure represents the true probability of an instance is positiv
 In this experiment, we flip the gender of all the instances and measure the average prediction change for each gender. After only flipping the gender feature, **21.0% of the instances have their prediction changed**. Changing the gender of the loan borrower from female to male increases the prediction by 11.2% on average, and changing the gender from male to female decreases the prediction by 9.6% on average. The result indicates that the model is unfair and relies on gender to make its prediction. The model is biased toward giving male loan borrowers a higher prediction of default probability. The result confirmed our findings in the Group Fairness experiment. Both models show the same bias, which suggested the dataset is biased. We find that the dataset indeed has a 0.1 correlation between gender and whether the loan defaults. The extent of the bias, 10%, aligned with the result of the Causal Discrimination test and Group Fairness test.
 
 
-### Explanation Comparison
-Compare explanation generated from different model and different XAI methods.
-
-
-
 ## 5. Code
 [Click here to see code for this project](https://github.com/zhw005/DSC180B-Project)
 
