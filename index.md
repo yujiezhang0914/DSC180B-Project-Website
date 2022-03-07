@@ -223,8 +223,6 @@ In this experiment, we flip the gender of all the instance and measure the avera
 Compare explanation generated from different model and different XAI methods.
 
 
-## Discussion
-- Discuss the results.
 
 ## Code
 [Click here to see code for this project](https://github.com/zhw005/DSC180B-Project)
