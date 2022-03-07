@@ -191,21 +191,33 @@ Here is another example of how room type causes the LGBM model to predict false 
 The same procedure used to generate causal inference for the previous example applies here as well. The DoWhy model first sets the “room_type” to be the treatment and identifies the cofounder “property_type” and estimand it tries to estimate. Then, it estimates the ATE to be around 0.077. So, the predictor tends to give FP predictions if the room type is the entire home/apt. The estimate also passes all refutation tests. Again, this does not prove its correctness, but it increases confidence in the estimate. The result makes sense because if a model puts too much weight on the room type, it will predict the higher prices for listings with an entire place, while this is not always the case in reality. Sometimes a shared place could be more expensive than an entire apartment depending on the location and other factors.
 
 
+
+
 ### Fairness Analysis
-In this section, we run all the fairness evaluation methods on different datasets and models. We select some interesting result for each method and the presented in the followings. We assume the dataset represent the actual population.
+In this section, we run all the fairness evaluation methods on different datasets and models. We select some interesting results for each method and the presented in the followings. We assume the dataset represents the actual population.
 
 #### Group Fairness
+- Dataset: Loan
+- Model: SVM Classifier
+- Sensitive variable: Gender (`CODE_GENDER`)
+
+In this test, we measure the probability of the model giving a positive prediction on male and female individuals. A fair model should rely on the sensitve variable and thus should have the same average prediction on the two groups. The trained SVM classifier has a 0.61 average prediction on the female subjects and 0.7 on the male subjects. The expectation difference is about 0.09. In other words, the model has a bias toward giving male loan borrowers a higher default probability. Therefore, we concluded that the SVM classifier is not fair.
 
 #### Predictive Parity
+- Dataset: Loan
+- Model: XGBClassifier
+- Sensitive variable: Marital Status (`NAME_FAMILY_STATUS`)
+
+It is debatable whether marital status is a sensitive variable in loan default prediction. In this experiment, we assume it is and we compute the predictive parity between the married individual and the not married. We compute the true positive rate of the model on the two groups. A fair model should have the same true positive rate on both groups. The not married group has a true positive rate of 0.675 while the married group has a true positive rate of 0.674. The predictivity difference is only 0.001. The model has similar predictive power on the two groups of individuals. Therefore, we conclude that the model is fair in terms of marital status under the predictive parity test.
 
 #### Conditional Frequencies
 - Dataset: Airbnb
 - Model: XGboost
 - Sensitive variable: Randomly generated gender column
 
-The gender attribute of each instance are randomly generated. Therefore it's not correlated with the target at all. The correlation coefficient of the two variable is 0.02. 
+The gender attribute of each instance is randomly generated. Therefore it's not correlated with the target at all. The correlation coefficient of the two variables is 0.02. 
 
-Each bar of the figure represent the true probability of an instance being positive given that the model prediction is within a certain range. From the graph, we can see that when model's prediction is within the 0.4\~0.6 bin or the 0.6\~0.8 bin, male airbnb host has a significantly lower true probability of being in the positive class. In other words, the model overpredicted on instances with male owner. Hense, the model is unfair.
+Each bar of the figure represents the true probability of an instance is positive given that the model prediction is within a certain range. From the graph, we can see that when the model's prediction is within the 0.4\~0.6 bin or the 0.6\~0.8 bin, male Airbnb host has a significantly lower true probability of being in a positive class. In other words, the model overpredicted on instances with the male owners. Hence, the model is unfair.
 
 ![fairness evaluation - conditional frequencies](image/fairness_freq.png)
 
@@ -214,7 +226,7 @@ Each bar of the figure represent the true probability of an instance being posit
 - Model: TabNet
 - Sensitive variable: Gender (`CODE_GENDER`)
 
-In this experiment, we flip the gender of all the instance and measure the average prediction change for each gender. After only flipping the gender feature, **21.0% of the instances have their prediction changed**. By changing gender of the loan borrower from female to male increases the prediction by 11.2% on average, and by changing the gender from male to female decreases the prediction by 9.6% on average. The result indicates that the model is unfair and rely on the gender to make it's prediction. The model is biased toward giving male loan borrower a higher prediction of default probability.
+In this experiment, we flip the gender of all the instances and measure the average prediction change for each gender. After only flipping the gender feature, **21.0% of the instances have their prediction changed**. Changing the gender of the loan borrower from female to male increases the prediction by 11.2% on average, and changing the gender from male to female decreases the prediction by 9.6% on average. The result indicates that the model is unfair and relies on gender to make its prediction. The model is biased toward giving male loan borrowers a higher prediction of default probability. The result confirmed our findings in the Group Fairness experiment. Both models show the same bias, which suggested the dataset is biased. We find that the dataset indeed has a 0.1 correlation between gender and whether the loan defaults. The extent of the bias, 10%, aligned with the result of the Causal Discrimination test and Group Fairness test.
 
 
 ### Explanation Comparison
