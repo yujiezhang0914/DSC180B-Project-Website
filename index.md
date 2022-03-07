@@ -140,8 +140,8 @@ According to the permutation importance graph, we can see that except for the fe
 ### Local Explanation
 In this section, we will present examples of local explanations for an individual in the healthcare dataset. 
 
-The graph below shows the LIME for one individual in the test set of the healthcare dataset. This individual is a Caucasian female with steady insulin who is taking diabetes medications. The predicted outcome for this individual is 0, which means that this individual is not readmitted to the hospital. According to the graph, we can tell that being a Caucasian contributes the most to being predicted to class 1, having steady insulin and not being an African American has the most negative impact on being predicted to class 1. 
-![Image](image/healthcare_xgboost_LIME.png)
+The graph below shows the LIME for one individual in the test set of the healthcare dataset. This individual is a Caucasian female with steady insulin who is taking diabetes medications. The predicted outcome for this individual is 0, which means that this individual is predicted to not be readmitted to the hospital. According to the graph, we can tell that not being a Hispanic contributes the most to being predicted to class 0, then is not being an African American. 
+![Image](image/healthcare_xgboost_LIME_Updated.png)
 
 The graph below shows the Shapley values for the same individual.
 ![Image](image/healthcare_xgboost_SHAP.png)
