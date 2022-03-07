@@ -7,7 +7,7 @@
 - [Zhendong Wang](https://github.com/zhw005)
 - [Yujie Zhang](https://github.com/yujiezhang0914)
 
-## Introduction - Assess the Fairness and reasoning of Black Box Model Outcomes using Explainable AI 
+## 1. Introduction - Assess the Fairness and reasoning of Black Box Model Outcomes using Explainable AI 
 
 Nowadays, the algorithmic decision-making system has been very common in people’s daily lives. Gradually, some algorithms become too complex for humans to interpret, such as some black-box machine learning models and deep neural networks. 
 
@@ -24,7 +24,7 @@ In the project, we are focusing on using different techniques from causal infere
 4) Evaluating the explanations from those XAI methods using domain knowledge.
 
 
-## Datasets in Three Domains
+## 2. Datasets in Three Domains
 
 In our project, we use datasets from three domains: Healthcare, Finance, and Housing Market.
 
@@ -46,7 +46,7 @@ We choose the housing market domain because housing is an essential element in e
 
 [LINK to Housing Dataset](https://www.kaggle.com/airbnb/seattle?select=listings.csv)
 
-## Methods of XAI
+## 3. Methods of XAI
 
 We selected four popular machine learning models that's often used in tabular data classification. Our model selection covers classic machine learning model, ensemble model, and deep learning model. Following is a breif introduction to those models. Since this project focuses on model explanation, we will skip the model training details here.
 
@@ -145,7 +145,7 @@ For each classification model, we evaluated the fairness based on four definitio
 
 
 
-## Results
+## 4. Results
 
 ### Global Explanation
 In this section, we will present several interesting examples of PDP and Permutation Feature Importance. Below are the PDPs of ‘FLAG_OWN_CAR: N’, ‘NAME_INCOME_TYPE: Unemployed’, ‘NAME_HOUSING_TYPE: Rented apartment’, ‘NAME_EDUCATION_TYPE: Higher Education’ from the loan dataset that uses the XGBoost model. 
@@ -224,11 +224,11 @@ Compare explanation generated from different model and different XAI methods.
 
 
 
-## Code
+## 5. Code
 [Click here to see code for this project](https://github.com/zhw005/DSC180B-Project)
 
 
-## Reference
+## 6. Reference
 
 - Molnar, C. (2021, November 11). Interpretable machine learning. 9.5 Shapley Values. Retrieved December 2, 2021, from https://christophm.github.io/interpretable-ml-book/shapley.html.
 
