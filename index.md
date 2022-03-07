@@ -138,8 +138,16 @@ According to the permutation importance graph, we can see that except for the fe
 
 
 ### Local Explanation
-Pick three data instance from each dataset...
-some example of global explanation of local explanation result (plots) Interactive js code from SHAP and LIME
+In this section, we will present examples of local explanations for an individual in the healthcare dataset. 
+
+The graph below shows the LIME for one individual in the test set of the healthcare dataset. This individual is a Caucasian female with steady insulin who is taking diabetes medications. The predicted outcome for this individual is 0, which means that this individual is not readmitted to the hospital. According to the graph, we can tell that being a Caucasian contributes the most to being predicted to class 1, having steady insulin and not being an African American has the most negative impact on being predicted to class 1. 
+![Image](image/healthcare_xgboost_LIME.png)
+
+The graph below shows the Shapley values for the same individual.
+![Image](image/healthcare_xgboost_SHAP.png)
+From the graph above, we can see that the average prediction is -0.16, and the actual prediction for this individual is -0.412. And not on Diabetes Med has the most effect of dragging the prediction closer to -0.412. Being a Caucasian has the most effect of dragging the prediction the most closer to -0.16.
+
+
 
 ### Counterfactual
 Use the same data instance to generate counterfactual result
