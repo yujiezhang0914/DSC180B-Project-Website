@@ -167,7 +167,10 @@ From the graph above, we can see that the average prediction is -0.16, and the a
 
 
 ### Counterfactual
-Use the same data instance to generate counterfactual result
+
+
+
+
 
 ### False Positive (FP) and False Negative (FN) Explanations
 We analyzed both false positives and false negatives predictions of multiple black-box models on various datasets. In this section, we will be using the results found in the Airbnb dataset as an example of our analysis. 
