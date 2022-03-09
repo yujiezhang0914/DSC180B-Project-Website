@@ -167,9 +167,7 @@ From the graph above, we can see that the average prediction is -0.16, and the a
 
 
 ### Counterfactual
-
-
-
+In this section, we tested the robustness of the models using a set of minimal actions to determine the change in predictions of these black-box models. To generate recourse explanations, we optimized certain actionable attributes that are significant predictors and can easily impact the model's predictions. We used the loan dataset to generate recourse for individuals negatively impacted by the model's predictions. The actionable attributes for the loan dataset were ‘FLAG_OWN_CAR: N’, ‘NAME_INCOME_TYPE: Unemployed’, ‘NAME_HOUSING_TYPE: Rented apartment’, ‘NAME_EDUCATION_TYPE: Higher Education’, 'DAYS_BIRTH', and 'AMT_CREDIT'. As actionable recourse, an individual can multiple steps. First, they can apply for a loan when they can prove ownership of a car, to decrease the likelihood of being classified as a loan defaulter. Employment status and amount of credit they applied for are significant predictors in the loan default prediction model. Therefore, an individual should be employed and ensure their credit amount does not exceed three times their income amount to ensure they are not classified as a loan defaulter. The age and education history are also important variables in the model, and an individual apply for a loan when they have obtained the highest education that they can and when they are at least 25 and employed. To further decrease the probablity of being negatively affected by the model's prediction, individuals should also apply for a loan when they can show home ownership.
 
 
 ### False Positive (FP) and False Negative (FN) Explanations
