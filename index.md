@@ -19,9 +19,9 @@ In the project, we are focusing on using different techniques from causal infere
 
 2) Assessing the fairness of each learning algorithm with regard to different sensitive attributes;
  
-3) Generating recourse for individuals - a set of minimal actions to change the prediction of those black-box models;
+3) Explaining False Negative and False Positive predictions using Causal Inference;
  
-4) Evaluating the explanations from those XAI methods using domain knowledge.
+4) Generating recourse for individuals - a set of minimal actions to change the prediction of those black-box models.
 
 
 ## 2. Datasets in Three Domains
